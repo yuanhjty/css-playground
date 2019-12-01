@@ -19,7 +19,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "示例"
+      default: "Example"
     },
     html: {
       type: String,
@@ -51,6 +51,7 @@ export default {
   margin: 8px 0 16px;
   font-family: Courier, monospace;
   line-height: 1.5;
+  overflow: auto;
 }
 
 .result {

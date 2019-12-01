@@ -19,7 +19,13 @@ export const routes = requireComponent.keys().map(filename => {
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes: [
+    ...routes,
+    {
+      path: "/",
+      redirect: routes[0] && routes[0].path
+    }
+  ]
 });
 
 export default router;

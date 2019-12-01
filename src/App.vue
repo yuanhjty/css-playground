@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Nav />
-    <div class="main">
-      <router-view />
+    <div class="main-wrapper">
+      <div class="main">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -32,8 +34,13 @@ body {
   display: flex;
 }
 
+.main-wrapper {
+  width: calc(100% - 200px);
+  height: 100vh;
+  overflow: auto;
+}
+
 .main {
   padding: 20px 40px;
-  width: calc(100% - 200px);
 }
 </style>

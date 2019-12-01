@@ -22,6 +22,7 @@ export default {
   background: #f5f5f5;
   height: 100vh;
   width: 200px;
+  min-width: 200px;
   overflow-y: auto;
 }
 
@@ -32,7 +33,6 @@ export default {
   padding: 8px 16px;
   text-decoration: none;
   border-bottom: solid 1px #fff;
-  overflow: auto;
 }
 
 .nav a:hover {
