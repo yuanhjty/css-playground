@@ -1,6 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import Example from "./components/Example.vue";
+
+Vue.component("Example", Example);
 
 Vue.config.productionTip = false;
 

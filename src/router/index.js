@@ -1,25 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import kebabCase from "lodash/kebabCase";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
-];
+const requireComponent = require.context("../views", false, /\.vue$/);
+
+export const routes = requireComponent.keys().map(filename => {
+  const componentName = filename.slice(0, -4).replace(/\.\//g, "");
+
+  return {
+    path: `/${kebabCase(componentName)}`,
+    name: componentName,
+    component: requireComponent(filename).default
+  };
+});
 
 const router = new VueRouter({
   mode: "history",
