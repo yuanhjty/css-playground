@@ -26,6 +26,13 @@ body {
   margin: 0;
 }
 
+code {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0 3px;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

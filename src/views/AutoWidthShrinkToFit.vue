@@ -35,7 +35,7 @@ const html = /*html*/ `
 </div>
 `;
 
-const cssForDocs = /*css*/ `
+const docsCss = /*css*/ `
 .auto-width-shrink-to-fit-box {
   text-align: center;
   padding: 10px 10px;
@@ -52,8 +52,8 @@ const cssForDocs = /*css*/ `
 export default {
   name: "AutoWidthShrinkToFit",
   data: () => ({
-    html,
-    css: cssForDocs
+    html: html.trim(),
+    css: docsCss.trim()
   })
 };
 </script>

@@ -25,7 +25,7 @@ const html = /*html*/ `
 <div id="id-selector-style">baz</div>
 `;
 
-const css = /*css*/ `
+const docsCss = /*css*/ `
 #id-selector-style {
   display: inline-table;
   margin-right: 12px;
@@ -38,8 +38,8 @@ const css = /*css*/ `
 export default {
   name: "IdSelectorStyle",
   data: () => ({
-    html,
-    css
+    html: html.trim(),
+    css: docsCss.trim()
   })
 };
 </script>

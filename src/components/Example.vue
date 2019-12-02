@@ -5,10 +5,10 @@
     <div class="result">
       <span v-html="html"></span>
     </div>
-    <div class="code-title" v-if="trimmedHtml">html</div>
-    <div class="code" v-if="trimmedHtml">{{ trimmedHtml }}</div>
-    <div class="code-title" v-if="trimmedCss">css</div>
-    <div class="code" v-if="trimmedCss">{{ trimmedCss }}</div>
+    <div class="code-title" v-if="html">html</div>
+    <div class="code" v-if="html">{{ html }}</div>
+    <div class="code-title" v-if="css">css</div>
+    <div class="code" v-if="css">{{ css }}</div>
     <hr />
   </div>
 </template>
@@ -29,12 +29,6 @@ export default {
       type: String,
       default: ""
     }
-  },
-  data: function() {
-    return {
-      trimmedHtml: this.html.trim(),
-      trimmedCss: this.css.trim()
-    };
   }
 };
 </script>

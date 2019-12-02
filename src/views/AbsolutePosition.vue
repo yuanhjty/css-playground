@@ -32,7 +32,7 @@ const html = /*html*/ `
 </div>
 `;
 
-const cssForDocs = /*css*/ `
+const docsCss = /*css*/ `
 .absolute-position-container {
   position: relative;
   outline: solid 1px;
@@ -53,8 +53,8 @@ const cssForDocs = /*css*/ `
 export default {
   name: "AbsolutePosition",
   data: () => ({
-    html,
-    css: cssForDocs
+    html: html.trim(),
+    css: docsCss.trim()
   })
 };
 </script>

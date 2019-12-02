@@ -17,7 +17,7 @@ const html = /*html*/ `
 <div class="demo">replace html and css with yours</div>
 `;
 
-const cssForDocs = /*css*/ `
+const docsCss = /*css*/ `
 .demo {
   color: #42b983;
 }
@@ -26,8 +26,8 @@ const cssForDocs = /*css*/ `
 export default {
   name: "AATemplate",
   data: () => ({
-    html,
-    css: cssForDocs
+    html: html.trim(),
+    css: docsCss.trim()
   })
 };
 </script>
