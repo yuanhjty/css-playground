@@ -25,21 +25,8 @@
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<div id="id-selector">foo</div>
-<div id="id-selector">bar</div>
-<div id="id-selector">baz</div>
-`;
-
-const docCss = /*css*/ `
-#id-selector {
-  display: inline-table;
-  margin-right: 12px;
-  padding: 8px 16px;
-  border: solid 1px #e7e7e7;
-  color: red;
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   data: () => ({

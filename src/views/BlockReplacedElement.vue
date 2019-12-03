@@ -33,28 +33,8 @@ video.element {
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<input class="element">
-<textarea class="element"></textarea>
-<video class="element"></video>
-<img class="element" src="https://placekitten.com/200/150">
-<object
-  class="element"
-  type="image/webp"
-  data="https://placekitten.com/300/200">
-</object>
-`;
-
-const docCss = /*css*/ `
-.element {
-  display: block;
-  margin-bottom: 10px;
-}
-
-video.element {
-  outline: solid 1px #e7e7e7;
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   data: () => ({

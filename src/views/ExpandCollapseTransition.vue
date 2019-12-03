@@ -51,45 +51,8 @@
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<input id="checkbox" type="checkbox"></input>
-<div class="content">
-  你当然可以说：人没什么可自大的。对于蛇来说
-  <br />到处都是路。鸟飞在空中需要路吗？
-  ...
-</div>
-<label
-  for="checkbox"
-  class="checkbox-label">
-</label">
-`;
-
-const docCss = /*css*/ `
-.content {
-  max-height: 24px;
-  overflow: hidden;
-  transition: max-height 0.25s;
-}
-
-.checkbox-label:after {
-  display: inline-block;
-  content: "展开";
-  color: #00abac;
-  cursor: pointer;
-}
-
-#checkbox {
-  display: none;
-}
-
-#checkbox:checked ~ .content {
-  max-height: 300px; 
-}
-
-#checkbox:checked ~ .checkbox-label:after {
-  content: "收起";
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   data: () => ({

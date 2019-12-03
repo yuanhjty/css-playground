@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 const requireComponent = require.context("../views", false, /\.vue$/);
 
 export const routes = requireComponent.keys().map(filename => {
-  const componentName = filename.slice(0, -4).replace(/\.\//g, "");
+  const componentName = filename.slice(0, -4).replace(/\.|\//g, "");
 
   return {
     path: `/${kebabCase(componentName)}`,

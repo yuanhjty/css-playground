@@ -35,28 +35,8 @@
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<div class="box">
-  <div class="content">居中显示</div>
-</div>
-<div class="box">
-  <div class="content">文字内容，超过一行时左对齐...</div>
-</div>
-`;
-
-const docCss = /*css*/ `
-.box {
-  text-align: center;
-  padding: 10px 10px;
-  background: #f5e5e5;
-  margin-bottom: 10px;
-}
-
-.content {
-  display: inline-block;
-  text-align: left;
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   data: () => ({

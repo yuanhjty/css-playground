@@ -37,35 +37,8 @@
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<div class="concave">
-  <span>love xx love</span>
-</div>
-<div class="convex">
-  <span>xx love xx</span>
-</div>
-`;
-
-const docCss = /*css*/ `
-.concave,
-.convex {
-  display: inline-block;
-  width: 0;
-}
-
-.concave span,
-.convex span {
-  outline: solid 2px #000;
-  color: transparent;
-  font-family: Monaco, monospace;
-  font-size: 16px
-}
-
-.convex {
-  margin-left: 80px;
-  direction: rtl;
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   data: () => ({

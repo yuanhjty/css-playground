@@ -35,33 +35,8 @@
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<div class="box">
-  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item"></div>
-</div>
-`;
-
-const docCss = /*css*/ `
-.box {
-  overflow: auto;
-  white-space: nowrap;
-}
-
-.item {
-  display: inline-block;
-  background: #08ffc8;
-  width: 30%;
-  height: 100px;
-}
-
-.item:not(:last-child) {
-  margin-right: 10px;
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   name: "InlineBlockNoWrap",

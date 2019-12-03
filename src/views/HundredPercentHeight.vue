@@ -90,73 +90,8 @@
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<div class="parent-relative">
-  <h3>title</h3>
-  <p>content content content</p>
-  <div class="child-fixed">
-    fixed position
-    <br />
-    height: 100%
-  </div>
-  <div class="child-absolute">
-    absolute position
-    <br />
-    height: 100%
-  </div>
-</div>
-<div class="parent-static">
-  <div class="child-static">
-    static position
-    <br />
-    height: 100%
-  </div>
-</div>
-`;
-
-const docCss = /*css*/ `
-.parent-relative,
-.parent-static {
-  border: solid 5px #e7e7e7;
-  margin: 20px;
-  padding: 20px;
-}
-
-.parent-relative {
-  position: relative;
-}
-
-.parent-static {
-  height: 100px;
-}
-
-.child-fixed,
-.child-absolute,
-.child-static {
-  text-align: center;
-  width: 200px;
-  height: 100%;
-  opacity: 0.5;
-}
-
-.child-fixed {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: rgba(255, 241, 172, 1);
-}
-
-.child-absolute {
-  position: absolute;
-  top: 0;
-  left: 100px;
-  background: rgba(255, 181, 73, 1);
-}
-
-.child-static {
-  background: rgba(255, 181, 73, 1);
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   data: () => ({

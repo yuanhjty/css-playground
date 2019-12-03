@@ -37,30 +37,8 @@
 
 /************************/
 <script>
-const docHtml = /*html*/ `
-<div class="container">
-  container
-  <div class="child">带 margin 的绝对定位元素</div>
-</div>
-`;
-
-const docCss = /*css*/ `
-.container {
-  position: relative;
-  outline: solid 1px;
-  padding: 10px;
-  height: 80px;
-}
-
-.child {
-  position: absolute;
-  margin: 20px;
-  background: #ccc;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-`;
+const docHtml = "{{html}}";
+const docCss = "{{css}}";
 
 export default {
   data: () => ({
