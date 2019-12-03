@@ -2,12 +2,17 @@
   <div>
     <h1>Title</h1>
     <p>Descriptions...</p>
-    <Example :html="html" :css="css"> </Example>
+
+    <Example :html="html" :css="css">
+      <!-- write your htmls here -->
+    </Example>
   </div>
 </template>
 
 /************************/
-<style scoped></style>
+<style scoped>
+/* write your css here */
+</style>
 
 /************************/
 <script>
