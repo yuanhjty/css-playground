@@ -91,7 +91,7 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <div class="container">
   <div class="box">
     <p>等比例矩形</p>
@@ -115,7 +115,7 @@ const html = /*html*/ `
 </div>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .container {
   max-width: 300px;
   margin: 0 auto;
@@ -168,8 +168,8 @@ const docsCss = /*css*/ `
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

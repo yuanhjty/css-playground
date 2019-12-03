@@ -90,7 +90,7 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <div class="parent-relative">
   <h3>title</h3>
   <p>content content content</p>
@@ -114,7 +114,7 @@ const html = /*html*/ `
 </div>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .parent-relative,
 .parent-static {
   border: solid 5px #e7e7e7;
@@ -160,8 +160,8 @@ const docsCss = /*css*/ `
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

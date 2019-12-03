@@ -70,7 +70,7 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <div class="box">
   <span>我是一个不带垂直 padding 的 span</span>
   <br />
@@ -99,7 +99,7 @@ const html = /*html*/ `
 </div>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .box {
   outline: solid 1px #e7e7e7;
   margin-bottom: 17px;
@@ -131,8 +131,8 @@ const docsCss = /*css*/ `
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

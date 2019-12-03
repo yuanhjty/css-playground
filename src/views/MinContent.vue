@@ -37,7 +37,7 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <div class="concave">
   <span>love xx love</span>
 </div>
@@ -46,7 +46,7 @@ const html = /*html*/ `
 </div>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .concave,
 .convex {
   display: inline-block;
@@ -69,8 +69,8 @@ const docsCss = /*css*/ `
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

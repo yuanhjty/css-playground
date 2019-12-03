@@ -33,7 +33,7 @@ video.element {
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <input class="element">
 <textarea class="element"></textarea>
 <video class="element"></video>
@@ -45,7 +45,7 @@ const html = /*html*/ `
 </object>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .element {
   display: block;
   margin-bottom: 10px;
@@ -58,8 +58,8 @@ video.element {
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

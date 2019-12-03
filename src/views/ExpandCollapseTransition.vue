@@ -51,7 +51,7 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <input id="checkbox" type="checkbox"></input>
 <div class="content">
   你当然可以说：人没什么可自大的。对于蛇来说
@@ -64,7 +64,7 @@ const html = /*html*/ `
 </label">
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .content {
   max-height: 24px;
   overflow: hidden;
@@ -93,8 +93,8 @@ const docsCss = /*css*/ `
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

@@ -35,7 +35,7 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <div class="box">
   <div class="item"></div>
   <div class="item"></div>
@@ -45,7 +45,7 @@ const html = /*html*/ `
 </div>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .box {
   overflow: auto;
   white-space: nowrap;
@@ -66,8 +66,8 @@ const docsCss = /*css*/ `
 export default {
   name: "InlineBlockNoWrap",
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

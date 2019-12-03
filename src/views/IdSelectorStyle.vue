@@ -25,13 +25,13 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <div id="id-selector">foo</div>
 <div id="id-selector">bar</div>
 <div id="id-selector">baz</div>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 #id-selector {
   display: inline-table;
   margin-right: 12px;
@@ -43,8 +43,8 @@ const docsCss = /*css*/ `
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>

@@ -37,14 +37,14 @@
 
 /************************/
 <script>
-const html = /*html*/ `
+const docHtml = /*html*/ `
 <div class="container">
   container
   <div class="child">带 margin 的绝对定位元素</div>
 </div>
 `;
 
-const docsCss = /*css*/ `
+const docCss = /*css*/ `
 .container {
   position: relative;
   outline: solid 1px;
@@ -64,8 +64,8 @@ const docsCss = /*css*/ `
 
 export default {
   data: () => ({
-    html: html.trim(),
-    css: docsCss.trim()
+    html: docHtml.trim(),
+    css: docCss.trim()
   })
 };
 </script>
