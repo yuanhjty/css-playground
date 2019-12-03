@@ -18,6 +18,7 @@
   </div>
 </template>
 
+/************************/
 <style scoped>
 .box {
   text-align: center;
@@ -32,6 +33,7 @@
 }
 </style>
 
+/************************/
 <script>
 const html = /*html*/ `
 <div class="box">

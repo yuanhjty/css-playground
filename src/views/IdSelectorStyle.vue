@@ -12,6 +12,7 @@
   </div>
 </template>
 
+/************************/
 <style scoped>
 #id-selector {
   display: inline-table;
@@ -22,6 +23,7 @@
 }
 </style>
 
+/************************/
 <script>
 const html = /*html*/ `
 <div id="id-selector">foo</div>

@@ -16,6 +16,7 @@
   </div>
 </template>
 
+/************************/
 <style scoped>
 .container {
   position: relative;
@@ -34,6 +35,7 @@
 }
 </style>
 
+/************************/
 <script>
 const html = /*html*/ `
 <div class="container">

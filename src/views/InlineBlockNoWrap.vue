@@ -14,6 +14,7 @@
   </div>
 </template>
 
+/************************/
 <style scoped>
 .box {
   overflow: auto;
@@ -32,6 +33,7 @@
 }
 </style>
 
+/************************/
 <script>
 const html = /*html*/ `
 <div class="box">

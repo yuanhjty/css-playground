@@ -21,6 +21,7 @@
   </div>
 </template>
 
+/************************/
 <style scoped>
 .content {
   max-height: 24px;
@@ -48,6 +49,7 @@
 }
 </style>
 
+/************************/
 <script>
 const html = /*html*/ `
 <input id="checkbox" type="checkbox"></input>

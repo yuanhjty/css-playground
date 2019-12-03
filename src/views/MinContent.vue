@@ -13,6 +13,7 @@
   </div>
 </template>
 
+/************************/
 <style scoped>
 .concave,
 .convex {
@@ -34,6 +35,7 @@
 }
 </style>
 
+/************************/
 <script>
 const html = /*html*/ `
 <div class="concave">

@@ -6,8 +6,10 @@
   </div>
 </template>
 
+/************************/
 <style></style>
 
+/************************/
 <script>
 const html = /*html*/ `
 `;

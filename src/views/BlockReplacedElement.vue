@@ -19,6 +19,7 @@
   </div>
 </template>
 
+/************************/
 <style scoped>
 .element {
   display: block;
@@ -30,6 +31,7 @@ video.element {
 }
 </style>
 
+/************************/
 <script>
 const html = /*html*/ `
 <input class="element">
