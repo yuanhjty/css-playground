@@ -1,7 +1,7 @@
 <template>
   <div class="example">
     <p class="code-title" v-if="title">{{ title }}</p>
-    <hr v-if="html && css" />
+    <hr />
     <div class="result">
       <slot></slot>
     </div>
@@ -9,7 +9,6 @@
     <div class="code" v-if="html">{{ html }}</div>
     <div class="code-title" v-if="css">css</div>
     <div class="code" v-if="css">{{ css }}</div>
-    <hr v-if="html && css" />
   </div>
 </template>
 
