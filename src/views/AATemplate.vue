@@ -6,25 +6,16 @@
   </div>
 </template>
 
-<style>
-.demo {
-  color: #42b983;
-}
-</style>
+<style></style>
 
 <script>
 const html = /*html*/ `
-<div class="demo">replace html and css with yours</div>
 `;
 
 const docsCss = /*css*/ `
-.demo {
-  color: #42b983;
-}
 `;
 
 export default {
-  name: "AATemplate",
   data: () => ({
     html: html.trim(),
     css: docsCss.trim()
