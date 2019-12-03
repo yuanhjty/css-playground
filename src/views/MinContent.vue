@@ -3,65 +3,69 @@
     <h1>首选最小宽度</h1>
     <p>Descriptions...</p>
     <Example :html="html" :css="css">
-      {{ html }}
+      <div class="concave">
+        <span>love xx love</span>
+      </div>
+      <div class="convex">
+        <span>xx love xx</span>
+      </div>
     </Example>
   </div>
 </template>
 
-<style>
-.min-content-concave,
-.min-content-convex {
+<style scoped>
+.concave,
+.convex {
   display: inline-block;
   width: 0;
 }
 
-.min-content-concave span,
-.min-content-convex span {
+.concave span,
+.convex span {
   outline: solid 2px #000;
   color: transparent;
   font-family: Monaco, monospace;
   font-size: 16px;
 }
 
-.min-content-convex {
-  margin-left: 80px;
+.convex {
+  margin-left: 90px;
   direction: rtl;
 }
 </style>
 
 <script>
 const html = /*html*/ `
-<div class="min-content-concave">
+<div class="concave">
   <span>love xx love</span>
 </div>
-<div class="min-content-convex">
+<div class="convex">
   <span>xx love xx</span>
 </div>
 `;
 
 const docsCss = /*css*/ `
-.min-content-concave,
-.min-content-convex {
+.concave,
+.convex {
   display: inline-block;
   width: 0;
 }
 
-.min-content-concave span,
-.min-content-convex span {
+.concave span,
+.convex span {
   outline: solid 2px #000;
   color: transparent;
   font-family: Monaco, monospace;
   font-size: 16px
 }
 
-.min-content-convex {
+.convex {
   margin-left: 80px;
   direction: rtl;
 }
 `;
 
 export default {
-  name: "MinContent",
   data: () => ({
     html: html.trim(),
     css: docsCss.trim()
