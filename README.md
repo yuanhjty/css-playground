@@ -48,9 +48,17 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Note
 
-- Don't touch these two lines of code inside the `script` tag if you want your html and css appear in the docs.
+- If you want your html and css appear in the docs, don't touch these two lines of code inside the `script` tag: 
 
   ```javascript
   const docHtml = "{{html}}";
   const docCss = "{{css}}";
   ```
+
+  And don't touch `:html="html"` and `:css="css"` in the `Example` tag:
+
+  ```javascript
+  <Example :html="html" :css="css">
+  ```
+
+- Only one `Example` element is supported in a view file.
