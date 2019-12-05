@@ -22,7 +22,7 @@
   position: relative;
   border: solid 5px #e7e7e7;
   padding: 10px;
-  height: 80px;
+  height: 100px;
 }
 
 .child {
