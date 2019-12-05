@@ -37,10 +37,15 @@ function trimStartSpaces(str, count) {
 
 function getHtml(src) {
   const html = getElementContent(src, "Example");
-  const htmlLines = html
-    .replace(/\r/g, "")
-    .split("\n")
-    .filter(Boolean);
+  let htmlLines = html.replace(/\r/g, "").split("\n");
+
+  while (htmlLines[0] === "") {
+    htmlLines.shift();
+  }
+
+  while (htmlLines[htmlLines.length - 1] === "") {
+    htmlLines.pop();
+  }
 
   const firstLine = htmlLines[0];
   if (!firstLine) {
@@ -49,8 +54,10 @@ function getHtml(src) {
 
   const toTrimSpaceCount = countStartSpaces(firstLine);
   const formattedHtml = htmlLines
-    .map(line => trimStartSpaces(line, toTrimSpaceCount))
-    .join("\n");
+    .map(line =>
+      line === "" ? "\n" : `${trimStartSpaces(line, toTrimSpaceCount)}\n`
+    )
+    .join("");
 
   return formattedHtml;
 }
