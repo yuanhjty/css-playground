@@ -58,6 +58,7 @@ export default {
 .result {
   padding: 12px 20px;
   margin: 12px 0;
-  background: #f5f5f5;
+  border: solid 1px #e7e7e7;
+  border-right: none;
 }
 </style>
