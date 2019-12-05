@@ -24,7 +24,7 @@
         inline 标签 padding 设为 50%，将空 inline 标签的 font-size 设为 0，使得
         strut 节点的高度为 0，即可得到一个正方形
       </h4>
-      <div class="inline-rectangle-box  zero-font-size">
+      <div class="inline-rectangle-box zero-font-size">
         <span class="inline-rectangle"></span>
       </div>
     </Example>
