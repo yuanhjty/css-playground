@@ -2,9 +2,9 @@
   <div>
     <h1>绝对定位元素的 margin</h1>
     <p>
-      绝对定位元素的 top/bottom/left/height 基于<b>自身的 margin box </b>和<b
-        >定位父亲元素的 padding box</b
-      >
+      绝对定位元素的 top/bottom/left/height 基于
+      <b>自身的 margin box</b>和
+      <b>定位父亲元素的 padding box</b>
       计算。
     </p>
     <Example :html="html" :css="css">
