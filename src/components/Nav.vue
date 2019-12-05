@@ -1,18 +1,25 @@
 <template>
-  <div class="nav">
-    <router-link v-for="route in routes" :key="route.path" :to="route.path">
-      {{ route.name }}
-    </router-link>
-  </div>
+  <Resizable :minWidth="minWidth">
+    <div class="nav">
+      <router-link v-for="route in routes" :key="route.path" :to="route.path">{{
+        route.name
+      }}</router-link>
+    </div>
+  </Resizable>
 </template>
 
 <script>
 import { routes } from "../router";
+import Resizable from "./Resizable";
 
 export default {
   name: "Nav",
+  components: {
+    Resizable
+  },
   data: () => ({
-    routes
+    routes,
+    minWidth: 200
   })
 };
 </script>
@@ -21,9 +28,10 @@ export default {
 .nav {
   background: #f5f5f5;
   height: 100vh;
-  width: 200px;
+  width: 100%;
   min-width: 200px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .nav a {
