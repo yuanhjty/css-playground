@@ -1,5 +1,9 @@
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+function escapeQuotes(str) {
+  return str.replace(/['"`]/g, "\\\\\\$&");
+}
+
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 
 function getElementContent(src, tagName) {
@@ -75,9 +79,9 @@ function docLoader(src) {
     /[`'"]{{(html)}}[`'"]|[`'"]{{(css)}}[`'"]/g,
     (match, htmlCapture, cssCapture) => {
       if (htmlCapture === "html") {
-        return "`" + html + "`";
+        return "`" + escapeQuotes(html) + "`";
       } else if (cssCapture === "css") {
-        return "`" + css + "`";
+        return "`" + escapeQuotes(css) + "`";
       }
       return match;
     }
