@@ -1,5 +1,5 @@
 function escapeQuotes(str) {
-  return str.replace(/['"`]/g, "\\\\\\$&");
+  return str.replace(/['"`]/g, "\\$&");
 }
 
 function escapeRegExp(str) {
