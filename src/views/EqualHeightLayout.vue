@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Title</h1>
-    <p>Descriptions...</p>
+    <h1>等高布局</h1>
 
     <Example :html="html" :css="css">
       <h4>table-cell 布局</h4>
