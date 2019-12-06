@@ -1,27 +1,46 @@
 <template>
   <div class="example">
-    <p class="title" v-if="title">{{ title }}</p>
-    <hr />
-    <p class="title">rendering result</p>
+    <h3>{{ title }}</h3>
     <Resizable panelColor="#1ec0ff" initialWidth="100%">
-      <div class="result">
+      <div class="rendering">
         <slot></slot>
       </div>
     </Resizable>
-    <div class="title" v-if="html">html</div>
-    <div class="code" v-if="html">{{ html }}</div>
-    <div class="title" v-if="css">css</div>
-    <div class="code" v-if="css">{{ css }}</div>
+
+    <div v-if="html">
+      <div class="code-type" v-if="html">html</div>
+      <pre><code class="xml" v-html="highlight('html', html).value"></code></pre>
+    </div>
+
+    <div v-if="css">
+      <div class="code-type" v-if="css">css</div>
+      <pre><code class="css" v-html="highlight('css', css).value"></code></pre>
+    </div>
   </div>
 </template>
 
 <script>
+import hljs from "highlight.js/lib/highlight";
+import css from "highlight.js/lib/languages/css";
+import xml from "highlight.js/lib/languages/xml";
 import Resizable from "./Resizable";
+
+hljs.registerLanguage("css", css);
+hljs.registerLanguage("xml", xml);
 
 export default {
   name: "Example",
   components: {
     Resizable
+  },
+  mounted() {
+    hljs.initHighlighting();
+  },
+  beforeDestroy() {
+    hljs.initHighlighting.called = false;
+  },
+  methods: {
+    highlight: hljs.highlight
   },
   props: {
     title: {
@@ -41,24 +60,18 @@ export default {
 </script>
 
 <style scoped>
-.title {
+/* @import "../../node_modules/highlight.js/styles/atom-one-light.css"; */
+/* @import "../../node_modules/highlight.js/styles/foundation.css"; */
+@import "../../node_modules/highlight.js/styles/github.css";
+
+.code-type {
   font-family: Courier, monospace;
 }
 
-.code {
-  white-space: pre;
-  background: #f5f5f5;
-  padding: 12px 20px;
-  margin: 8px 0 16px;
-  font-family: Courier, monospace;
-  line-height: 1.5;
-  overflow: auto;
-}
-
-.result {
-  padding: 12px 20px;
+.rendering {
+  padding: 6.5px;
   margin: 12px 0;
-  border: solid 1px #e7e7e7;
+  background: #f8f8f8;
   border-right: none;
 }
 </style>
