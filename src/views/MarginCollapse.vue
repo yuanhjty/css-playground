@@ -19,8 +19,8 @@
       <i>阻止这类margin合并：</i>
       <ul>
         <li>
-          父元素设置为块状格式化上下文元素。
-          <code>overflow: hidden</code> 可以设置父级元素为块状格式化上下文
+          父元素设置为块状格式化上下文元素。overflow:
+          hidden可以设置父级元素为块状格式化上下文
         </li>
         <li>父元素设置非零border-top/border-bottom值</li>
         <li>父元素设置非零padding-top/padding-bottom值</li>
@@ -57,7 +57,7 @@
       <div class="item"></div>
 
       <h4>
-        父元素设置 overflow: hidden 消除父子元素的margin合并
+        父元素设置 { overflow: hidden } 消除父子元素的margin合并
         <br />空块级元素自身的margin-top和margin-bottom合并
       </h4>
       <div class="overflow-hidden-parent">

@@ -8,8 +8,7 @@
       属性仍然会覆盖低优先级的 height 属性）。
     </p>
     <div>
-      有两种情况下
-      <code>height: 100%</code> 生效：
+      有两种情况下 { height: 100% } 生效：
       <ol>
         <li>父元素的 height 属性为非 auto</li>
         <li>元素的 position 属性为 absolute 或 fixed</li>
