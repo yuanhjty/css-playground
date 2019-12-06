@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Title</h1>
-    <p>Descriptions...</p>
+    <h1>垂直居中方案</h1>
 
     <Example :html="html" :css="css">
       <h4>绝对定位 + { top/bottom: 0; margin: auto }</h4>
