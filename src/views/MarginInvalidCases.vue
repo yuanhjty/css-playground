@@ -48,13 +48,23 @@
         </p>
       </div>
 
-      <h4 class="margin-bottom-200">内联特性导致的margin无效</h4>
-      <div class="margin-bottom-200">
+      <h4>内联特性导致的margin无效</h4>
+      <p class="margin-bottom-200">
+        在下面例子中，内联的img元素产生了一个行框，每个行框最前面都有一个不可见的strut节点，在CSS中，
+        非主动触发的内联元素是不可能跑到计算容器的外面的，img元素的默认vertical-align值为baseline，
+        与strut的baseline对齐，img的位置也就被vertical-align:baseline给限死了，所以其
+        margin-bottom无论如何设置，在上移到一定限度后都无法再继续上移。
+      </p>
+      <div class="margin-bottom-200 outline">
         <img class="margin-top--300" src="https://placekitten.com/300/200" />
       </div>
-      <div>
+      <div class="margin-bottom-200 outline">
         <img class="margin-top--100" src="https://placekitten.com/200/200" />
+        <img class="margin-top--300" src="https://placekitten.com/200/200" />
+      </div>
+      <div class="outline">
         <img class="margin-top--200" src="https://placekitten.com/200/200" />
+        <img class="margin-top--300" src="https://placekitten.com/200/200" />
       </div>
     </Example>
   </div>
