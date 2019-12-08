@@ -73,7 +73,7 @@
 /************************/
 <style scoped>
 .outline {
-  outline: solid 1px #e7e7e7;
+  outline: solid 1px #1ec0ff;
 }
 
 .margin-20 {
