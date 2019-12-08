@@ -96,6 +96,13 @@
         <i class="justify-fix outline"></i>
         <i class="justify-fix outline"></i>
       </div>
+
+      <h4>水平垂直居中弹出框</h4>
+      <div class="container outline">
+        <div class="dialog">
+          为天地立心，为生民立命，为往圣继绝学，为万世开太平。
+        </div>
+      </div>
     </Example>
   </div>
 </template>
@@ -161,6 +168,33 @@
 
 .font-size-0 {
   font-size: 0;
+}
+
+.container {
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0;
+  overflow: auto;
+  height: 200px;
+}
+
+.container::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.dialog {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  text-align: left;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 180px;
 }
 </style>
 
