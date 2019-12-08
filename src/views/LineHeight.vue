@@ -78,15 +78,9 @@
         块级容器中有text或非空内联元素时，生成行框，line-height影响行框高度，
         进而影响块级容器的高度
       </h4>
-      <div class="line-height-0 outline margin">
-        line-height: 0
-      </div>
-      <div class="line-height-1 outline margin">
-        line-height: 1
-      </div>
-      <div class="line-height-2 outline margin">
-        line-height: 2
-      </div>
+      <div class="line-height-0 outline margin">line-height: 0</div>
+      <div class="line-height-1 outline margin">line-height: 1</div>
+      <div class="line-height-2 outline margin">line-height: 2</div>
 
       <h4>行框高度计算</h4>
       <p>
