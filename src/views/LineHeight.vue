@@ -79,19 +79,19 @@
         进而影响块级容器的高度
       </h4>
       <div class="line-height-0 outline margin">
-        庭院深深深几许，杨柳堆烟，帘幕无重数。
+        line-height: 0
       </div>
       <div class="line-height-1 outline margin">
-        庭院深深深几许，杨柳堆烟，帘幕无重数。
+        line-height: 1
       </div>
       <div class="line-height-2 outline margin">
-        庭院深深深几许，杨柳堆烟，帘幕无重数。
+        line-height: 2
       </div>
 
       <h4>行框高度计算</h4>
       <p>
-        strut节点的行内框最高，为40px，内部两个span节点的行内框都没超过strut节点的行内框上下边界，
-        所以行框高度为40px
+        strut节点的行内框最高，为外部容器的line-height值40px，内部两个span节点的line-height分别
+        为30px和10px，它们的行内框都没超过strut节点的行内框上下边界，所以行框高度为40px。
       </p>
       <div class="line-height-50px outline margin">
         <span class="line-height-30px outline">xxx</span>
@@ -99,19 +99,20 @@
       </div>
 
       <p>
-        strut节点的行内为20px，内部两个span节点的行内框顶部和底部分别超过了strut节点的行内框上下边界，
-        行框最高点为第一个span行内框的最高点，最低点为第二个span行内框的最低点。
+        strut节点的行内为外部容器的line-height值20px，内部两个span节点的line-height分别为30px和
+        40px，vertical-align分别为30px和-30px，它们的行内框的顶部和底部分别超过了strut节点的行内框
+        的上下边界，行框最高点为第一个span行内框的最高点，最低点为第二个span行内框的最低点。
       </p>
       <div class="line-height-10px outline margin">
         <span class="line-height-30px vertical-align-30px outline">xxx</span>
         <span class="line-height-40px vertical-align--30px outline">zzz</span>
       </div>
 
-      <h4>
+      <p>
         下面示例中，由于每个行框中存在line-height为50px的strut节点，导致内部的span的line-heigt
         虽然重置成了20px，但依然无法改变行框的高度，如果span的line-height被重置为比50px
         更大的值， 则行框高度会使用更大的值。
-      </h4>
+      </p>
       <div class="line-height-50px outline">
         <span class="line-height-20px outline">
           参横斗转欲三更，苦雨终风也解晴。 云散月明谁点缀？天容海色本澄清。
@@ -119,13 +120,13 @@
         </span>
       </div>
 
-      <h4>
+      <p>
         将内部span
         display属性设置为inline-block，span内部生成了独立于外部的行框，
         设置在span上的
         line-height生效。但是inline-block元素的baseline为其内容区底部，与其所在行框的strut节点的
         baseline（不在内容区底部）对齐，导致外层容器底部看起来留有一些间隙。
-      </h4>
+      </p>
       <div class="line-height-50px outline">
         <span class="line-height-20px inline-block outline">
           参横斗转欲三更，苦雨终风也解晴。 云散月明谁点缀？天容海色本澄清。
