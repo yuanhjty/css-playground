@@ -31,7 +31,6 @@ export default {
   width: 100%;
   min-width: 200px;
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .nav a {
@@ -39,10 +38,10 @@ export default {
   font-weight: bold;
   color: #2c3e50;
   white-space: nowrap;
-  min-width: min-content;
   text-decoration: none;
   padding: 8px 16px;
   border-bottom: solid 1px #fff;
+  overflow: hidden;
 }
 
 .nav a:hover {
