@@ -12,12 +12,26 @@
       </div>
 
       <h4>
-        {position:absolute;clip:rect(0, 0, 0, 0);}隐藏元素，隐藏后依然可访问
+        {position:absolute;clip:rect(0, 0, 0, 0);}隐藏元素，隐藏后依然可访问。
+        如果是通过display:none或visible:hidden隐藏，则隐藏后不可访问。
       </h4>
+      <p>clip隐藏</p>
       <div>
-        <input id="clip-input" class="clip-input" />
+        <input id="hidden-input-1" class="input clip" />
         <span>已聚焦到input框</span>
-        <label for="clip-input">点我聚焦到隐藏的input框</label>
+        <label for="hidden-input-1">点我聚焦到隐藏的input框</label>
+      </div>
+      <p>display:none隐藏</p>
+      <div>
+        <input id="hidden-input-2" class="input display-none" />
+        <span>已聚焦到input框</span>
+        <label for="hidden-input-2">点我无法聚焦到隐藏的input框</label>
+      </div>
+      <p>visible:hidden隐藏</p>
+      <div>
+        <input id="hidden-input-2" class="input visibility-hidden" />
+        <span>已聚焦到input框</span>
+        <label for="hidden-input-2">点我无法聚焦到隐藏的input框</label>
       </div>
     </Example>
   </div>
@@ -37,22 +51,30 @@
   padding: 20px;
 }
 
-.clip-input {
+.clip {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
 
-.clip-input + span {
+.display-none {
   display: none;
 }
 
-.clip-input:focus + span {
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.input + span {
+  display: none;
+}
+
+.input:focus + span {
   display: inline;
   margin-right: 20px;
   color: yellowgreen;
 }
 
-.clip-input ~ label {
+.input ~ label {
   cursor: pointer;
   color: olive;
 }
