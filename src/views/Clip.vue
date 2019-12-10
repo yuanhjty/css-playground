@@ -4,7 +4,7 @@
     <p>clip属性只有在position为fixed或absolute时才有效</p>
 
     <Example :html="html" :css="css">
-      <h4>clip</h4>
+      <h4>clip以border box为基准进行裁剪</h4>
       <div class="box">
         <div>abc</div>
         <img src="https://placekitten.com/200/200" />
@@ -31,7 +31,10 @@
 
 .box > img {
   position: absolute;
-  clip: rect(10px, 160px, 160px, 40px);
+  clip: rect(0, 160px, 160px, 40px);
+  margin: 20px;
+  border: solid 20px lightgreen;
+  padding: 20px;
 }
 
 .clip-input {
