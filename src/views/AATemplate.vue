@@ -11,7 +11,9 @@
 
 /************************/
 <style scoped>
-/* write your css here */
+.outline {
+  outline: solid 1px #1ec0ff;
+}
 </style>
 
 /************************/
